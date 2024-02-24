@@ -1,0 +1,160 @@
+{
+    "CPU": [
+        {
+            "name": "인텔",
+            "details": {
+                "products": "Intel D/T CPU / Intel Server / ASUS 메인보드, 그래픽카드",
+                "phone": "1544-7855",
+                "address": "서울특별시 용산구 청파로 74 전자랜드 신관 광장(G)층 1호",
+                "website": "https://www.intechn.com/Customer/Support"
+            }
+        },
+        {
+            "name": "AMD\n[제이씨현]",
+            "details": {
+                "products": "",
+                "phone": "1577-3367",
+                "address": "서울특별시 용산구 새창로45길 74",
+                "website": "http://jchyun.com/"
+            }
+        },
+        {
+            "name": "AMD\n[대원CTS]",
+            "details": {
+                "products": "",
+                "phone": "1599-3999",
+                "address": "서울특별시 용산구 원효로 142, 삼원빌딩 (원효로3가) 지하1층 \n 대원씨티에스 기술지원센터 AMD A/S 담당자 앞",
+                "website": "https://dwcts.co.kr/ServiceCenter/Main"
+            }
+        }
+    ],
+    "메인보드": [
+        {
+            "name": "기가바이트\n[제이씨현]",
+            "details": {
+                "products": "",
+                "phone": "1577-3367",
+                "address": "서울특별시 용산구 청파로 74 전자랜드 신관 광장(G)층 1호",
+                "website": "http://jchyun.com/"
+            }
+        },
+        {
+            "name": "MSI 코리아\n[CS이노베이션]",
+            "details": {
+                "products":"",
+                "phone": "02-1577-5261",
+                "address": "서울시 용산구 신계동 6-1 제이씨현빌딩 1층,  CS이노베이션",
+                "website": "https://www.csinnovation.co.kr/"
+            }
+        },
+        {
+            "name": "ASRock\n[에즈원]",
+            "details": {
+                "products": "Intel, AMD CPU / Asrock 그래픽카드",
+                "phone": "02-718-0933",
+                "address": "서울시 용산구 원효로 2가 59-6 3층",
+                "website": "https://aswin.co.kr/"
+            }
+        }
+    ],
+    "그래픽카드": [
+        {
+            "name": "COLORFUL\n[웨이코스]",
+            "details": {
+                "products": "COLORFUL 메인보드 및 그래픽 카드",
+                "phone": "02-712-2630",
+                "address": "서울특별시 용산구 청파로 74 용산전자랜드 신관동 5층 512호 \n 웨이코스 고객지원센터",
+                "website": "http://waycos.co.kr/colorful/bbs/board.php?bo_table=as&wr_id=3"
+            }
+        },
+        {
+            "name": "INNO3D\n[아이노비아]",
+            "details": {
+                "products": "INNO3D 제품",
+                "phone": "1522-8793",
+                "address": "서울시 영등포구 경인로 775 에이스하이테크시티 1동 507-1호 \n (주)아이노비아",
+                "website": "https://www.inovia.co.kr/customer/asguide.php"
+            }
+        },
+        {
+            "name": "갤럭시 코리아",
+            "details": {
+                "products": "갤럭시 그래픽카드, 쿨러, 키보드, 마우스",
+                "phone": "02-701-0520",
+                "address": "서울시 용산구 원효로 138, 청진빌딩 9층 \n 갤럭시코리아 고객지원센터",
+                "website": "http://www.galax.kr/sub03/as_info.php"
+            }
+        },
+        {
+            "name": "조텍(Zotac) 코리아",
+            "details": {
+                "products": "조텍(Zotac) 그래픽카드",
+                "phone": "02-6958-7330",
+                "address": "서울시 용산구 원효로 3가 53-5 \n 청진빌딩 101호(1층) ",
+                "website": "http://www.zotackor.com/?this_in=ascenter"
+            }
+        }
+    ],
+    "RAM": [
+        {
+            "name": "㈜서린씨앤아이\n고객지원센터",
+            "details": {
+                "products": "리안리 / 지스킬 / 팀구룹 / 게일 / 프렉탈디자인",
+                "phone": "070-4917-8889",
+                "address": "서울시 용산구 새창로 45길 78 401호",
+                "website": "http://seorincni.co.kr/post/2"
+            }
+        }
+    ],
+    "HDD/SSD": [
+        {
+            "name": "대원CTS",
+            "details": {
+                "products": "WD(Western Digital), 마이크론(Micron Crucial), 샌디스크(SanDisk)",
+                "phone": "1599-3999",
+                "address": "서울특별시 용산구 청파로 74 \n 전자랜드 신관 광장(G)층 1호",
+                "website": "https://dwcts.co.kr/ServiceCenter/Main"
+            }
+        }
+    ],
+    "파워 서플라이": [
+        {
+            "name": "마이크로닉스",
+            "details": {
+                "products": "마이크로닉스 파워, PNY제품",
+                "phone": "02-1522-6399",
+                "address": "서울 용산구 한강로2가 2-185 \n 용산아이피아 대주피오레 1층 1012호",
+                "website": "http://www.micronics.co.kr/micronics/support.php"
+            }
+        },
+        {
+            "name": "SuperFlower\n[뉴젠씨엔티]",
+            "details": {
+                "products": "마이크로닉스 파워, PNY제품",
+                "phone": "02-713-4215",
+                "address": "서울 용산구 한강로3가 16-60 \n 한통빌딩 502호",
+                "website": "https://www.newzencnt.com/subpage.php?p=m41"
+            }
+        },
+        {
+            "name": "탑파워 코리아",
+            "details": {
+                "products": "Topower 제품",
+                "phone": "070-7572-1333",
+                "address": "서울시 용산구 신계동 28-23",
+                "website": "http://www.topower.co.kr/"
+            }
+        }
+    ],
+    "쿨러 및 팬": [
+        {
+            "name": "지우샥[JIUSHARK]\n(주)프리오텍]",
+            "details": {
+                "products": "JIUSHARK 쿨러 및 팬",
+                "phone": "02-719-8668",
+                "address": "서울 용산구 새창로 153-3",
+                "website": "https://friotech.co.kr/?page_id=54"
+            }
+        }
+    ]
+}
