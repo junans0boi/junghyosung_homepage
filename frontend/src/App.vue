@@ -12,6 +12,7 @@ import axios from "axios";
 import {watch} from "vue";
 import {useRoute} from "vue-router/dist/vue-router";
 
+
 export default {
   name: 'App',
   components: {
@@ -19,6 +20,7 @@ export default {
     Header
   },
   setup() {
+
     const check = () => {
       axios.get("/api/account/check").then(({data}) => {
         console.log(data);

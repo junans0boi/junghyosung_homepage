@@ -14,75 +14,9 @@
   </div>
 </template>
 
-<script>
-import {reactive} from "vue";
-import axios from "axios";
-import lib from "@/scripts/lib";
+<script src="@/scripts/pages/Cart.js"></script>
 
-export default {
-  setup() {
-    const state = reactive({
-      items: []
-    })
-
-    const load = () => {
-      axios.get("/api/cart/items").then(({data}) => {
-        console.log(data);
-        state.items = data;
-      })
-    };
-
-    const remove = (itemId) => {
-      axios.delete(`/api/cart/items/${itemId}`).then(() => {
-        load();
-      })
-    }
-
-    load();
-
-    return {state, lib, remove}
-  }
-}
-</script>
 
 <style scoped>
-.cart ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.cart ul li {
-  border: 1px solid #eee;
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-.cart ul li img {
-  width: 150px;
-  height: 150px;
-}
-
-.cart ul li .name {
-  margin-left: 25px;
-}
-
-.cart ul li .price {
-  margin-left: 25px;
-}
-
-.cart ul li i {
-  float: right;
-  font-size: 20px;
-  margin-top: 65px;
-  margin-right: 50px;
-}
-
-.cart .btn {
-  width: 300px;
-  display: block;
-  margin: 0 auto;
-  padding: 30px 50px;
-  font-size: 20px;
-}
+@import "@/css/Cart.css";
 </style>

@@ -16,6 +16,7 @@
                 <router-link to="/login" class="text-white" v-if="!$store.state.account.id">로그인</router-link>
                 <a to="/login" class="text-white" @click="logout()" v-else>로그아웃</a>
               </li>
+                <router-link to="/profile" class="text-white" v-if="$store.state.account.id">개인정보 수정</router-link>
             </ul>
           </div>
         </div>
@@ -31,15 +32,17 @@
 
           <header class="d-flex justify-content-center py-3">
             <ul class="nav nav-pills">
-              <router-link to="/aboutus" ><li class="nav-item">회사소개</li>        </router-link>
+              <router-link to="/aboutus" class="nav-item" :class="{ 'active': isActive('/aboutus') }">회사소개 </router-link>
 
-              <router-link to="/card" ><li class="nav-item">구매</li>        </router-link>
+              <router-link to="/card" class="nav-item" :class="{ 'active': isActive('/card') }">구매</router-link>
 
-              <router-link to="/asinfo" ><li class="nav-item">A/S</li>        </router-link>
+              <router-link to="/asinfo" class="nav-item" :class="{ 'active': isActive('/asinfo') }">A/S</router-link>
 
-              <router-link to="/aboutus" ><li class="nav-item">FAQs</li>        </router-link>
+              <router-link to="/faq" class="nav-item" :class="{ 'active': isActive('/faq') }">FAQs</router-link>
 
-              <router-link to="/login" ><li class="nav-item">로그인</li>        </router-link>
+              <router-link to="/login" class="nav-item" v-if="!$store.state.account.id">로그인</router-link>
+              <a to="/login" class="nav-item" @click="logout()" v-else>로그아웃</a>
+
 
             </ul>
           </header>
@@ -63,6 +66,11 @@ import axios from "axios";
 export default {
   name: 'Header',
   setup() {
+    const isActive = (path) => {
+      return router.currentRoute.value.path === path;
+    };
+
+
     const logout = () => {
       axios.post("/api/account/logout").then(()=>{
         store.commit('setAccount', 0);
@@ -70,7 +78,7 @@ export default {
       });
     }
 
-    return {logout}
+    return {logout, isActive}
   }
 }
 </script>
@@ -100,5 +108,9 @@ header .navbar .cart{
 .nav-item{
   color : white;
   margin: 10px;
+}
+.nav-item.active {
+  background-color: skyblue;
+  color : black;
 }
 </style>

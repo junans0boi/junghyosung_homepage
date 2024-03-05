@@ -1,0 +1,39 @@
+#about-page {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.intro-section {
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.intro-section h1 {
+    margin-bottom: 1rem;
+    color: #003366; /* 회사의 브랜드 색상에 맞춤 */
+    font-size: 2.5rem;
+}
+
+.intro-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.intro-section .thanks {
+
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.intro-section .signature {
+    margin-top: 1rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #003366;
+}

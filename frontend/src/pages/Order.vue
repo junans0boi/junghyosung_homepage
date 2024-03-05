@@ -43,30 +43,34 @@
                   <input type="text"
                          class="form-control"
                          id="address"
-                         v-model="state.form.address">
+                         v-model="state.form.address" disabled>
+                  <label class="form-check-label" for="bank">주소 변경는 "개인정보 수정"에서 변경 가능 합니다.</label>
+
                 </div>
+
+                <div class="col-12"><label for="phonenum" class="form-label">휴대폰 번호</label>
+                  <input type="text"
+                         class="form-control"
+                         id="address"
+                         v-model="state.form.phonenum">
+                </div>
+
               </div>
               <hr class="my-4">
               <h4 class="mb-3">결제 수단</h4>
               <div class="my-3">
                 <div class="form-check">
-                  <input id="card" name="paymentMethod" type="radio" class="form-check-input"
-                         value="card" v-model="state.form.payment">
-                  <label class="form-check-label" for="card">신용카드
-                  </label></div>
-                <div class="form-check">
                   <input id="bank" name="paymentMethod" type="radio" class="form-check-input"
-                         value="bank" v-model="state.form.payment">
-                  <label class="form-check-label" for="bank">무통장입금</label>
+                         value="bank" v-model="state.form.payment" checked>
+                  <label class="form-check-label" for="bank">계좌이체</label>
                 </div>
               </div>
-              <label for="cc-name" class="form-label">카드 번호</label>
-              <input type="text"
-                     class="form-control"
-                     id="cc-name"
-                     v-model="state.form.cardNumber">
+
+              <H3 for="cc-name" class="form-label">카카오뱅크 3333-13-5742856 이준환 </H3><br>
+              <label for="cc-name" class="form-label">계좌 송금이 확인 되면 주문이 됩니다. </label><br>
+              <label for="cc-name" class="form-label">신청 당일 미입금시 주문은 자동 취소 됩니다. </label><br>
               <hr class="my-4">
-              <button class="w-100 btn btn-primary btn-lg" @click="submit()">결제하기</button>
+              <button class="w-100 btn btn-primary btn-lg" @click="submit()">주문하기</button>
             </div>
           </div>
         </div>
@@ -75,58 +79,11 @@
   </div>
 </template>
 
-<script>
-import {computed, reactive} from "vue";
-import axios from "axios";
-import lib from "@/scripts/lib";
-import router from "@/scripts/router";
 
-export default {
-  setup() {
-    const state = reactive({
-      items: [],
-      form: {
-        name: "",
-        address: "",
-        payment: "",
-        cardNumber: "",
-        items: "",
-      }
-    })
+<script src="@/scripts/pages/Order.js"></script>
 
-    const load = () => {
-      axios.get("/api/cart/items").then(({data}) => {
-        console.log(data);
-        state.items = data;
-      })
-    };
 
-    const submit = () => {
-      const args = JSON.parse(JSON.stringify(state.form));
-      args.items = JSON.stringify(state.items);
-
-      axios.post("/api/orders", args).then(() => {
-        alert('주문 완료하였습니다.');
-        router.push({path: "/orders"})
-      })
-    }
-
-    const computedPrice = computed(() => {
-      let result = 0;
-
-      for (let i of state.items) {
-        result += i.price - i.price * i.discountPer / 100;
-      }
-
-      return result;
-    })
-
-    load();
-
-    return {state, lib, computedPrice, submit}
-  }
-}
-</script>
 
 <style scoped>
+@import "@/css/Order.css";
 </style>
